@@ -1,0 +1,16 @@
+d3:
+  version: 5.x
+  js:
+    js/d3.v5.min.js: {}
+  dependencies:
+    - core/jquery
+dbencounters_src:
+  version: 1.x
+  js:
+    js/dbencounters_src.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - dbencounters/d3

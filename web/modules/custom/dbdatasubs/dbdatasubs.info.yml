@@ -1,0 +1,5 @@
+name: Dashboard Data Submissions Custom Fetcher
+type: module
+description: 'Provides a Custom Feeds Fetcher for Dashboard Data Submissions'
+core: 8.x
+package: Dashboards

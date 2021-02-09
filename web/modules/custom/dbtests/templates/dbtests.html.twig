@@ -1,0 +1,77 @@
+<style>
+#dbtests {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20%;
+    vertical-align: top;
+}
+
+#dbtests h3 {
+    margin-top: 10px;
+}
+
+#dbtests .updated {
+    margin-bottom: 30px;
+}
+
+#dbtests svg{
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+
+#dbtests text.label {
+    font: 13px sans-serif;
+    font-weight: bold;
+    fill: steelblue;
+}
+#dbtests text.value {
+    font-size: 120%;
+    fill: black;
+}
+
+#dbtests .axisHorizontal path{
+    fill: none;
+}
+
+#dbtests .axisHorizontal .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+#dbtests .axisHorizontal .tick text {
+    font-size: 120%;
+}
+
+#dbtests .bar {
+    fill: steelblue;
+    fill-opacity: .9;
+}
+
+#dbtests text.nTotal {
+    font-size: 13px;
+    fill: black;
+} 
+
+</style>
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{label}}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{content}}
+       
+        <div id="dbtests">
+            <h2>Type of Respiratory Tests</h2>
+            <h3><span class="timeframe"></span> <span class="total"></span></h3>
+            <div class="updated"></div>
+            <svg></svg>
+        </div>
+    {% endblock %}
+</div>

@@ -1,0 +1,76 @@
+<style>
+    #dbencounters {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20%;
+        vertical-align: top;
+    }
+
+    #dbencounters h3 {
+        margin-top: 10px;
+    }
+
+    #dbencounters .updated {
+        margin-bottom: 30px;
+    }
+
+    #dbencounters svg{
+        display: inline-block;
+        position: absolute;
+        top: 150px;
+        left: 0;
+    }
+
+    #dbencounters text.label {
+        font: 13px sans-serif;
+        font-weight: bold;
+        fill: steelblue;
+    }
+    #dbencounters text.value {
+        font-size: 120%;
+        fill: black;
+    }
+
+    #dbencounters .axisHorizontal path{
+        fill: none;
+    }
+
+    #dbencounters .axisHorizontal .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+    }
+
+    #dbencounters .axisHorizontal .tick text {
+        font-size: 120%;
+    }
+
+    #dbencounters .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+    }
+    #dbencounters text.nTotal {
+        font-size: 13px;
+        fill: black;
+    }   
+</style>
+
+
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{label}}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{content}}
+       
+        <div id="dbencounters">
+            <h2>Encounters with Respiratory Diagnosis and/or Respiratory Virus Test</h2>
+            <h3><span class="timeframe"></span> <span class="total"></span></h3>
+            <div class="updated"></div>
+            <svg></svg>
+         </div>
+    {% endblock %}
+</div>

@@ -1,0 +1,198 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "c3js/c3",
+                "version": "v0.4.18",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "c3"
+                },
+                "dist": {
+                    "url": "https://github.com/c3js/c3/archive/v0.4.18.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "d3/d3",
+                "version": "v3.5.17",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "d3"
+                },
+                "dist": {
+                    "url": "https://github.com/d3/d3/archive/v3.5.17.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "google/charts",
+                "version": "45",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "google_charts"
+                },
+                "dist": {
+                    "url": "https://www.gstatic.com/charts/loader.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "billboardjs/billboard",
+                "version": "1.6.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "billboard"
+                },
+                "dist": {
+                    "url": "https://github.com/naver/billboard.js/archive/1.6.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "d3v4/d3",
+                "version": "4.9.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "d3v4"
+                },
+                "dist": {
+                    "url": "https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8",
+        "billboardjs/billboard": "1.6.2",
+        "c3js/c3": "0.4.18",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "d3/d3": "3.5.17",
+        "d3v4/d3": "4.9.1",
+        "drupal/address": "~1.0",
+        "drupal/admin_toolbar": "^2.3",
+        "drupal/anonymous_login": "^2.0",
+        "drupal/back_to_top": "^1.1",
+        "drupal/backup_migrate": "^4.1",
+        "drupal/bootstrap": "^3.23",
+        "drupal/charts": "^3.2",
+        "drupal/console": "^1.0.2",
+        "drupal/content_access": "^1.0",
+        "drupal/contentimport": "9.x-dev",
+        "drupal/core": "^8.9.0",
+        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/delete_all": "^2.0",
+        "drupal/devel": "^2.1",
+        "drupal/feeds": "^3.0",
+        "drupal/feeds_ex": "^1.0",
+        "drupal/geocoder": "^3.10",
+        "drupal/leaflet": "^2.0",
+        "drupal/leaflet_more_maps": "^1.0",
+        "drupal/login_tracker": "^1.4",
+        "drupal/module_filter": "^3.1",
+        "drupal/redirect_after_login": "^2.6",
+        "drupal/smtp": "^1.0@RC",
+        "drupal/views_cumulative_field": "^1.5",
+        "drupal/views_data_export": "^1.0",
+        "drupal/views_merge_rows": "^2.1",
+        "drupal/views_php": "1.x-dev",
+        "drupal/views_simple_math_field": "^1.9",
+        "drupal/visualization": "^1.0",
+        "drush/drush": "^10.3",
+        "firebase/php-jwt": "^5.2",
+        "geocoder-php/arcgis-online-provider": "^4.1",
+        "geocoder-php/google-maps-provider": "^4.5",
+        "google/charts": "45",
+        "vlucas/phpdotenv": "^4.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^8.8.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        }
+    }
+}

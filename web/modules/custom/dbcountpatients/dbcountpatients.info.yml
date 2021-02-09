@@ -1,0 +1,5 @@
+name: Dashboard Count Patients By Table Custom Fetcher
+type: module
+description: 'Provides a Custom Feeds Fetcher for Dashboard Count Patients By Table'
+core: 8.x
+package: Dashboards

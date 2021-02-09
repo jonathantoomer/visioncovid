@@ -1,0 +1,6 @@
+DisplaySetting,NumEncounters,Percent,DisplayPct,TotalEncounters
+Inpatient Visit or Observation,14969,4,4%,315808
+Outpatient Visit,188145,59,59%,315808
+Emergency Room Visit,23897,7,7%,315808
+Urgent Care Visit,31734,10,10%,315808
+Telehealth Visit,57063,18,18%,315808

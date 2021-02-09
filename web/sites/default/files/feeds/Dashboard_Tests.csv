@@ -1,0 +1,18 @@
+TestVirus,NumTests,TotalTests,DisplayPct,DisplayText,Updated
+1,11447,131116,8%,Influenza A (no subtype),10-06-20 11:00pm
+2,1130,131116,0%,Influenza A H1N1,10-06-20 11:00pm
+3,1130,131116,0%,Influenza A H3,10-06-20 11:00pm
+4,10383,131116,7%,Influenza B,10-06-20 11:00pm
+5,66,131116,0%,Influenza A/B (not distinguished),10-06-20 11:00pm
+6,5463,131116,4%,"RSV, type unknown",10-06-20 11:00pm
+7,1064,131116,0%,RSV A,10-06-20 11:00pm
+8,1064,131116,0%,RSV B,10-06-20 11:00pm
+9,4061,131116,3%,Adenovirus,10-06-20 11:00pm
+10,1176,131116,0%,Parainfluenza virus 1,10-06-20 11:00pm
+11,1176,131116,0%,Parainfluenza virus 2,10-06-20 11:00pm
+12,1176,131116,0%,Parainfluenza virus 3,10-06-20 11:00pm
+13,1110,131116,0%,Parainfluenza virus 4,10-06-20 11:00pm
+15,1110,131116,0%,Human metapneumovirus,10-06-20 11:00pm
+16,1291,131116,0%,Rhinovirus/enterovirus,10-06-20 11:00pm
+17,30599,131116,23%,"Coronavirus, type unknown",10-06-20 11:00pm
+22,57670,131116,43%,SARS-CoV-2,10-06-20 11:00pm

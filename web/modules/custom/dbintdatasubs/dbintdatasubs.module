@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains dbintdatasubs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function dbintdatasubs_theme($existing, $type, $theme, $path) {
+  return array(
+    'dbintdatasubs' => array(
+      'variables' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_help().
+ */
+function dbintdatasubs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dbintdatasubs module.
+    case 'help.page.dbintdatasubs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a Custom Fetcher for Data Submissions Dashboard.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

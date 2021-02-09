@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains dbdatasubs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function dbdatasubs_theme($existing, $type, $theme, $path) {
+  return array(
+    'dbdatasubs' => array(
+      'variables' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_help().
+ */
+function dbdatasubs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dbdatasubs module.
+    case 'help.page.dbdatasubs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a Custom Fetcher for Data Submissions Dashboard.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

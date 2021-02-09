@@ -1,0 +1,72 @@
+<style>
+#dbhospitalizations {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10%;
+    vertical-align: top;
+}
+
+#dbhospitalizations h3 {
+     margin-top: 10px;
+ }
+
+ #dbhospitalizations .updated {
+     margin-bottom: 30px;
+ }
+
+  #dbhospitalizations svg{
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+
+#dbhospitalizations text.label {
+    font: 13px sans-serif;
+    font-weight: bold;
+    fill: steelblue;
+}
+#dbhospitalizations text.value {
+    font-size: 120%;
+    fill: black;
+}
+
+#dbhospitalizations .axisHorizontal path{
+    fill: none;
+}
+
+#dbhospitalizations .axisHorizontal .tick text {
+    font-size: 120%;
+}
+
+#dbhospitalizations .axisHorizontal .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+#dbhospitalizations .bar {
+    fill: steelblue;
+    fill-opacity: .9;
+}
+
+
+</style>
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{label}}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{content}}
+       
+        <div id="dbhospitalizations">
+            <h2>Hospitalizations with a Respiratory Diagnosis and/or Respiratory Virus Test</h2>
+            <h3><span class="timeframe"></span> <span class="total"></span></h3>
+            <div class="updated"></div>
+            <svg></svg>
+        </div>
+    {% endblock %}
+</div>
